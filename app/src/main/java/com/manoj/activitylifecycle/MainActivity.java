@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
+    protected void onResume() {
+        super.onResume();
         toast("OnResume is Called!!");
     }
 
@@ -44,7 +44,17 @@ public class MainActivity extends AppCompatActivity {
         toast("OnDestroy is Called!!");
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        toast("OnRestart is Called!!");
+
+    }
+
     public void toast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
+
+
+
 }
